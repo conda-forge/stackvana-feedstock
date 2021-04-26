@@ -23,7 +23,7 @@ source:
 
 build:
   skip: true  # [win or py != 38]
-  number: 0
+  number: 1
   merge_build_host: true
 
 requirements:
@@ -43,7 +43,6 @@ outputs:
         - {{ compiler('cxx') }}
         - stackvana-core =={{ version }}
         - stackvana-afw =={{ version }}
-        - sysroot_linux-64 2.17.*  # [linux64]
         - cfitsio
         - curl
         - fftw
