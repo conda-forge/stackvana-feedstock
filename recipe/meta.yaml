@@ -1,4 +1,4 @@
-{% set name = "stackvana" %}
+{% set name = "stackvana-final" %}
 # LSST DM versions are prefixed with letters
 #
 #  - a weekly build is 'w_2018_50'
