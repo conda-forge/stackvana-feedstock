@@ -22,6 +22,7 @@ source:
   sha256: dd99e22d941d63f6f12a0e2add9ba0d998a1a623d0d6aae39e2008151374b23d
 
 build:
+  skip: true  # [win or py != 38]
   number: 1
 
 outputs:
