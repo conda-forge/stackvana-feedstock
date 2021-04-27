@@ -24,12 +24,14 @@ source:
 build:
   skip: true  # [win or py != 38]
   number: 1
-  merge_build_host: true
 
 outputs:
   - name: stackvana-{{ eups_product }}
     version: {{ version }}
     script: build_product.sh
+    build:
+      skip: true  # [win or py != 38]
+      merge_build_host: true
     requirements:
       host:
         - python
@@ -70,6 +72,9 @@ outputs:
   - name: stackvana
     version: {{ version }}
     script: build_stackvana.sh
+    build:
+      skip: true  # [win or py != 38]
+      merge_build_host: true
     requirements:
       host:
         - python
