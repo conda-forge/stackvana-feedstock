@@ -26,12 +26,6 @@ build:
   number: 1
   merge_build_host: true
 
-requirements:
-  host:
-    - python
-  run:
-    - python
-
 outputs:
   - name: stackvana-{{ eups_product }}
     version: {{ version }}
