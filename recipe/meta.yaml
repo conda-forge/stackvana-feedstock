@@ -1,4 +1,4 @@
-{% set name = "stackvana" %}
+{% set name = "stackvana-final" %}
 # LSST DM versions are prefixed with letters
 #
 #  - a weekly build is 'w_2018_50'
@@ -23,14 +23,8 @@ source:
 
 build:
   skip: true  # [win or py != 38]
-  number: 0
+  number: 1
   merge_build_host: true
-
-requirements:
-  host:
-    - python
-  run:
-    - python
 
 outputs:
   - name: stackvana-{{ eups_product }}
@@ -43,7 +37,6 @@ outputs:
         - {{ compiler('cxx') }}
         - stackvana-core =={{ version }}
         - stackvana-afw =={{ version }}
-        - sysroot_linux-64 2.17.*  # [linux64]
         - cfitsio
         - curl
         - fftw
@@ -82,7 +75,7 @@ outputs:
         - python
       run:
         - python
-        - stackvana-{{ eups_product }} =={{ version }}
+        - {{ pin_subpackage("stackvana-" ~ eups_product, max_pin="x.x.x") }}
     test:
       commands:
         - python -c "import lsst"
