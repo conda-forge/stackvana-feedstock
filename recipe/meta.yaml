@@ -22,14 +22,15 @@ source:
   sha256: dd99e22d941d63f6f12a0e2add9ba0d998a1a623d0d6aae39e2008151374b23d
 
 build:
-  skip: true  # [win or py != 38]
   number: 1
-  merge_build_host: true
 
 outputs:
   - name: stackvana-{{ eups_product }}
     version: {{ version }}
     script: build_product.sh
+    build:
+      skip: true  # [win or py != 38]
+      merge_build_host: true
     requirements:
       host:
         - python
@@ -70,6 +71,9 @@ outputs:
   - name: stackvana
     version: {{ version }}
     script: build_stackvana.sh
+    build:
+      skip: true  # [win or py != 38]
+      merge_build_host: true
     requirements:
       host:
         - python
