@@ -3,7 +3,7 @@ c_compiler:
 c_compiler_version:
 - '9'
 cdt_name:
-- cos7
+- cos6
 cfitsio:
 - '3.470'
 channel_sources:
@@ -17,7 +17,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '9'
 docker_image:
-- condaforge/linux-anvil-cos7-x86_64
+- quay.io/condaforge/linux-anvil-comp7
 eups_product:
 - lsst_distrib
 fftw:
