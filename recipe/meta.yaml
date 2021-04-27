@@ -81,7 +81,7 @@ outputs:
         - python
       run:
         - python
-        - stackvana-{{ eups_product }} =={{ version }}
+        - {{ pin_subpackage("stackvana-" ~ eups_product, max_pin="x.x.x") }}
     test:
       commands:
         - python -c "import lsst"
