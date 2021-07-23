@@ -15,5 +15,4 @@ else
 fi
 ln -s ${eigendir}/include/eigen3/Eigen ${PREFIX}/include/Eigen
 
-echo ${eups_product}
-stackvana-build meas_extensions_shapeHSM
+stackvana-build ${eups_product}
