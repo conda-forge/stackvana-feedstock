@@ -16,5 +16,5 @@ fi
 ln -s ${eigendir}/include/eigen3/Eigen ${PREFIX}/include/Eigen
 
 echo ${eups_product}
-${RECIPE_DIR}/stackvana-build meas_extensions_shapeHSM
+./${RECIPE_DIR}/stackvana-build meas_extensions_shapeHSM
 # stackvana-build ${eups_product}
