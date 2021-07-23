@@ -126,8 +126,8 @@ int main(int argc, char **argv) {
   if (lsst_lib_path != NULL) {
     prepend_env(\"DYLD_LIBRARY_PATH\", lsst_lib_path);
     prepend_env(\"DYLD_FALLBACK_LIBRARY_PATH\", lsst_lib_path);
-    append_env(\"DYLD_LIBRARY_PATH\", conda_prefix_lib);
-    append_env(\"DYLD_FALLBACK_LIBRARY_PATH\", conda_prefix_lib);
+    // append_env(\"DYLD_LIBRARY_PATH\", conda_prefix_lib);
+    // append_env(\"DYLD_FALLBACK_LIBRARY_PATH\", conda_prefix_lib);
   }
   argv[0] = orig_py;
   execv(orig_py, argv);
