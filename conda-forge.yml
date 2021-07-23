@@ -4,4 +4,3 @@ bot:
   check_solvable: true
 azure:
   store_build_artifacts: True
-build_with_mambabuild: True
