@@ -19,7 +19,7 @@ package:
 
 source:
   url: https://eups.lsst.codes/stack/src/tags/{{ dm_tag }}.list
-  sha256: 798db1f9ac58a5764705996765add7c01537306760d106e8cee1594d87a6baad
+  sha256: ed7b93ac887639861aa54343be04e8eed0ca4e00097b1b0bce3b1b6fd42205af
 
 build:
   number: 0
