@@ -98,6 +98,25 @@ int prepend_env(char *envname, char *envval) {
   return rval;
 }
 
+int append_env(char *envname, char *envval) {
+  char *curr_val = getenv(envname);
+  int rval;
+  char *new_val = NULL;
+  int new_len;
+
+  if (curr_val != NULL) {
+      new_len = strlen(curr_val) + strlen(envval) + 1 + 1;
+      new_val = (char*)malloc(sizeof(char) * new_len);
+      sprintf(new_val, \"%s:%s\", curr_val, envval);
+      rval = setenv(envname, new_val, 1);
+      free(new_val);
+  } else {
+    rval = setenv(envname, envval, 1);
+  }
+
+  return rval;
+}
+
 int main(int argc, char **argv) {
   const char *orig_py = \"${CONDA_PREFIX}/bin/python${LSST_PYVER}.bak\";
   char *lsst_lib_path = getenv(\"LSST_LIBRARY_PATH\");
@@ -107,8 +126,8 @@ int main(int argc, char **argv) {
   if (lsst_lib_path != NULL) {
     prepend_env(\"DYLD_LIBRARY_PATH\", lsst_lib_path);
     prepend_env(\"DYLD_FALLBACK_LIBRARY_PATH\", lsst_lib_path);
-    prepend_env(\"DYLD_LIBRARY_PATH\", conda_prefix_lib);
-    prepend_env(\"DYLD_FALLBACK_LIBRARY_PATH\", conda_prefix_lib);
+    append_env(\"DYLD_LIBRARY_PATH\", conda_prefix_lib);
+    append_env(\"DYLD_FALLBACK_LIBRARY_PATH\", conda_prefix_lib);
   }
   argv[0] = orig_py;
   execv(orig_py, argv);
