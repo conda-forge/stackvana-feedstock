@@ -50,7 +50,6 @@ outputs:
         - liblapacke
         - log4cxx
         - mpich
-        - galsim ==2.3.2
       run:
         - python
         - stackvana-core =={{ version }}
@@ -63,7 +62,6 @@ outputs:
         - hdf5 * mpi_mpich_*
         - mpich
         - {{ pin_compatible('numpy') }}
-        - galsim ==2.3.2
     test:
       commands:
         - setup {{ eups_product }}
