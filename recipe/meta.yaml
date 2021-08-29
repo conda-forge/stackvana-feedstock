@@ -22,7 +22,7 @@ source:
   sha256: 7dbe6e1ea307aa6f9efad337729194c6185447979b82ebd10eeb5c77376c286e
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: stackvana-{{ eups_product }}
@@ -42,8 +42,6 @@ outputs:
         - curl
         - fftw
         - gsl
-        - hdf5
-        - hdf5 * mpi_mpich_*
         - libblas
         - libcblas
         - liblapack
@@ -58,8 +56,6 @@ outputs:
         - curl
         - fftw
         - gsl
-        - hdf5
-        - hdf5 * mpi_mpich_*
         - mpich
         - {{ pin_compatible('numpy') }}
     test:
