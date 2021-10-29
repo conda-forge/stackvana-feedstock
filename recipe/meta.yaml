@@ -48,6 +48,7 @@ outputs:
         - liblapacke
         - log4cxx
         - mpich
+        - pyparsing <3
       run:
         - python
         - stackvana-core =={{ version }}
@@ -58,6 +59,7 @@ outputs:
         - gsl
         - mpich
         - {{ pin_compatible('numpy') }}
+        - pyparsing <3
     test:
       commands:
         - setup {{ eups_product }}
