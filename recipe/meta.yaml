@@ -58,7 +58,6 @@ outputs:
         - gsl
         - mpich
         - {{ pin_compatible('numpy') }}
-        - pyparsing <3
     test:
       commands:
         - setup {{ eups_product }}
