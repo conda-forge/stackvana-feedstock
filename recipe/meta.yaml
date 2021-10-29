@@ -48,7 +48,6 @@ outputs:
         - liblapacke
         - log4cxx
         - mpich
-        - pyparsing <3
       run:
         - python
         - stackvana-core =={{ version }}
