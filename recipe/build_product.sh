@@ -9,6 +9,13 @@ export EUPSPKG_NJOBS=2
 echo "
 Building eigen and making the symlinks..."
 stackvana-build eigen
+
+echo "======================================"
+echo "======================================"
+ls -lah ${EUPS_PATH}/*/eigen/*
+echo "======================================"
+echo "======================================"
+
 if [[ `uname -s` == "Darwin" ]]; then
     eigendir=$(compgen -G "${EUPS_PATH}/DarwinX86/eigen/3.3.7.lsst2*")
 else
