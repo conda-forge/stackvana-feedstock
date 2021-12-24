@@ -1,3 +1,4 @@
+set -ex
 
 export EUPSPKG_NJOBS=2
 
