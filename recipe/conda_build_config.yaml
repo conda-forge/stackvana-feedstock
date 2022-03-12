@@ -1,4 +1,4 @@
 eups_product:
   - lsst_distrib
-cfitsio:
-  - 3.470
+mpich:
+  - '3'
