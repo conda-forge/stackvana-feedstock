@@ -17,9 +17,9 @@ echo "======================================"
 echo "======================================"
 
 if [[ `uname -s` == "Darwin" ]]; then
-    eigendir=$(compgen -G "${EUPS_PATH}/DarwinX86/eigen/g398bedf734*")
+    eigendir=$(compgen -G "${EUPS_PATH}/DarwinX86/eigen/g1f08c258b4*")
 else
-    eigendir=$(compgen -G "${EUPS_PATH}/Linux64/eigen/g398bedf734*")
+    eigendir=$(compgen -G "${EUPS_PATH}/Linux64/eigen/g1f08c258b4*")
 fi
 ln -s ${eigendir}/include/eigen3/Eigen ${PREFIX}/include/Eigen
 
