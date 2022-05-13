@@ -1,6 +1,7 @@
-set -ex
-
 conda uninstall eigen --force --yes --offline
+conda install eigen=3.3 --force --yes --no-deps
+
+set -ex
 
 export EUPSPKG_NJOBS=2
 
