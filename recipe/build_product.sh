@@ -1,3 +1,6 @@
+conda uninstall eigen --force --yes --offline
+conda install eigen=3.3 --force --yes --no-deps
+
 set -ex
 
 export EUPSPKG_NJOBS=2
@@ -17,9 +20,9 @@ echo "======================================"
 echo "======================================"
 
 if [[ `uname -s` == "Darwin" ]]; then
-    eigendir=$(compgen -G "${EUPS_PATH}/DarwinX86/eigen/g1f08c258b4*")
+    eigendir=$(compgen -G "${EUPS_PATH}/DarwinX86/eigen/g04a8d4365e*")
 else
-    eigendir=$(compgen -G "${EUPS_PATH}/Linux64/eigen/g1f08c258b4*")
+    eigendir=$(compgen -G "${EUPS_PATH}/Linux64/eigen/g04a8d4365e*")
 fi
 ln -s ${eigendir}/include/eigen3/Eigen ${PREFIX}/include/Eigen
 
