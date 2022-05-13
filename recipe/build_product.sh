@@ -1,5 +1,7 @@
 set -ex
 
+conda uninstall eigen --force --yes --offline
+
 export EUPSPKG_NJOBS=2
 
 ###############################################################################
