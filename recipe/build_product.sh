@@ -1,5 +1,5 @@
 conda uninstall eigen --force --yes --offline
-conda install eigen=3.3 --force --yes --no-deps
+mamba install eigen=3.3 --force --yes --no-deps
 
 set -ex
 
