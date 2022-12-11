@@ -22,7 +22,7 @@ source:
   sha256: 968c3f9cbf1cba99b24044af2df6b386b20171eafe500d5e9219cb5dc2622c4b
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: stackvana-{{ eups_product }}
