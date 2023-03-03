@@ -1,11 +1,11 @@
-About stackvana-final
-=====================
+About stackvana-final-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/stackvana-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/beckermr/stackvana-core
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/stackvana-feedstock/blob/main/LICENSE.txt)
 
 Summary: stackvana build up to lsst_distrib
 
