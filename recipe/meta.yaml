@@ -29,7 +29,7 @@ outputs:
     version: {{ version }}
     script: build_product.sh
     build:
-      skip: true  # [win or py != 310]
+      skip: true  # [win or py != 311]
       merge_build_host: true
     requirements:
       host:
@@ -50,7 +50,7 @@ outputs:
     version: {{ version }}
     script: build_stackvana.sh
     build:
-      skip: true  # [win or py != 310]
+      skip: true  # [win or py != 311]
       merge_build_host: true
     requirements:
       host:
