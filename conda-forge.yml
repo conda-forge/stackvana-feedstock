@@ -1,4 +1,6 @@
 conda_forge_output_validation: true
+build_with_mambabuild: true
+remote_ci_setup: "conda-forge-ci-setup=3"
 bot:
   automerge: true
   check_solvable: true
