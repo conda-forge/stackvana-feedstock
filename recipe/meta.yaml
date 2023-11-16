@@ -23,6 +23,7 @@ source:
 
 build:
   number: 0
+  skip: true  # [not linux]
 
 outputs:
   - name: stackvana-{{ eups_product }}
