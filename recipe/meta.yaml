@@ -42,7 +42,9 @@ outputs:
         - stackvana-afw =={{ version }}
     test:
       commands:
-        - echo OK
+        - setup {{ eups_product }}
+        - python -c "import lsst"
+        - if [[ ! `eups list -s | grep "{{ eups_product }}"` ]]; then exit 1; fi
 
   - name: stackvana
     version: {{ version }}
@@ -58,7 +60,7 @@ outputs:
         - {{ pin_subpackage("stackvana-" ~ eups_product, max_pin="x.x.x") }}
     test:
       commands:
-        - echo OK
+        - python -c "import lsst"
 
 about:
   home: https://github.com/beckermr/stackvana-core
