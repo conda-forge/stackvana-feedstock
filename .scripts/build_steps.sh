@@ -37,6 +37,8 @@ mamba install --update-specs --yes --quiet --channel conda-forge --strict-channe
     pip mamba conda-build conda-forge-ci-setup=4 "conda-libmamba-solver>=23.11.1"
 mamba update --update-specs --yes --quiet --channel conda-forge --strict-channel-priority \
     pip mamba conda-build conda-forge-ci-setup=4 "conda-libmamba-solver>=23.11.1"
+# TEMPORARY:
+pip install -U https://github.com/jaimergp/conda/archive/investigate-cb-key-error.tar.gz --no-deps
 
 # set up the condarc
 setup_conda_rc "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
