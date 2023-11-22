@@ -39,7 +39,7 @@ mamba update --update-specs --yes --quiet --channel conda-forge --strict-channel
     pip mamba conda-build conda-forge-ci-setup=4 "conda-libmamba-solver>=23.11.1"
 # TEMPORARY:
 pip install -U https://github.com/jaimergp/conda-build/archive/debug-cls-keyerror.tar.gz --no-deps
-pip install -U https://github.com/conda/conda-libmamba-solver/archive/conda-build-offline.tar.gz --no-deps
+pip install -U git+https://github.com/conda/conda-libmamba-solver.git@conda-build-offline --no-deps
 pip install -U https://github.com/jaimergp/conda/archive/investigate-cb-key-error.tar.gz --no-deps
 /opt/conda/bin/conda init --all
 # /TEMPORARY
