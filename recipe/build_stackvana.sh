@@ -1,4 +1,3 @@
-
 # get the (de)activate scripts
 for CHANGE in "activate" "deactivate"; do
     mkdir -p "${PREFIX}/etc/conda/${CHANGE}.d"

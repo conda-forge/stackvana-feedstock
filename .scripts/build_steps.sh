@@ -34,9 +34,15 @@ CONDARC
 export CONDA_LIBMAMBA_SOLVER_NO_CHANNELS_FROM_INSTALLED=1
 
 mamba install --update-specs --yes --quiet --channel conda-forge --strict-channel-priority \
-    pip mamba conda-build boa conda-forge-ci-setup=3
+    pip mamba conda-build conda-forge-ci-setup=4 "conda-libmamba-solver>=23.11.1"
 mamba update --update-specs --yes --quiet --channel conda-forge --strict-channel-priority \
-    pip mamba conda-build boa conda-forge-ci-setup=3
+    pip mamba conda-build conda-forge-ci-setup=4 "conda-libmamba-solver>=23.11.1"
+# TEMPORARY:
+pip install -U https://github.com/jaimergp/conda-build/archive/debug-cls-keyerror.tar.gz --no-deps
+pip install -U git+https://github.com/conda/conda-libmamba-solver.git@conda-build-offline --no-deps
+pip install -U https://github.com/jaimergp/conda/archive/investigate-cb-key-error.tar.gz --no-deps
+/opt/conda/bin/conda init --all
+# /TEMPORARY
 
 # set up the condarc
 setup_conda_rc "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
@@ -79,7 +85,8 @@ if [[ "${BUILD_WITH_CONDA_DEBUG:-0}" == 1 ]]; then
     # Drop into an interactive shell
     /bin/bash
 else
-    conda mambabuild "${RECIPE_ROOT}" -m "${CI_SUPPORT}/${CONFIG}.yaml" \
+    # export CONDA_VERBOSITY=3
+    conda build --debug "${RECIPE_ROOT}" -m "${CI_SUPPORT}/${CONFIG}.yaml" \
         --suppress-variables ${EXTRA_CB_OPTIONS:-} \
         --clobber-file "${CI_SUPPORT}/clobber_${CONFIG}.yaml" \
         --extra-meta flow_run_id="${flow_run_id:-}" remote_url="${remote_url:-}" sha="${sha:-}"
