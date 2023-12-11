@@ -1,2 +1,2 @@
 eups_product:
-  - lsst_distrib
+  - pipe_base  # lsst_distrib
