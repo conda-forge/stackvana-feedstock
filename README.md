@@ -96,7 +96,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-stackvana-green.svg)](https://anaconda.org/conda-forge/stackvana) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/stackvana.svg)](https://anaconda.org/conda-forge/stackvana) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/stackvana.svg)](https://anaconda.org/conda-forge/stackvana) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/stackvana.svg)](https://anaconda.org/conda-forge/stackvana) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-stackvana--meas_base-green.svg)](https://anaconda.org/conda-forge/stackvana-meas_base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/stackvana-meas_base.svg)](https://anaconda.org/conda-forge/stackvana-meas_base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/stackvana-meas_base.svg)](https://anaconda.org/conda-forge/stackvana-meas_base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/stackvana-meas_base.svg)](https://anaconda.org/conda-forge/stackvana-meas_base) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-stackvana--pipe_tasks-green.svg)](https://anaconda.org/conda-forge/stackvana-pipe_tasks) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/stackvana-pipe_tasks.svg)](https://anaconda.org/conda-forge/stackvana-pipe_tasks) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/stackvana-pipe_tasks.svg)](https://anaconda.org/conda-forge/stackvana-pipe_tasks) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/stackvana-pipe_tasks.svg)](https://anaconda.org/conda-forge/stackvana-pipe_tasks) |
 
 Installing stackvana-final
 ==========================
@@ -108,16 +108,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `stackvana, stackvana-meas_base` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `stackvana, stackvana-pipe_tasks` can be installed with `conda`:
 
 ```
-conda install stackvana stackvana-meas_base
+conda install stackvana stackvana-pipe_tasks
 ```
 
 or with `mamba`:
 
 ```
-mamba install stackvana stackvana-meas_base
+mamba install stackvana stackvana-pipe_tasks
 ```
 
 It is possible to list all of the versions of `stackvana` available on your platform with `conda`:
