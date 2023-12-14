@@ -1,2 +1,2 @@
 eups_product:
-  - pipe_tasks  # lsst_distrib
+  - meas_algorithms  # lsst_distrib
