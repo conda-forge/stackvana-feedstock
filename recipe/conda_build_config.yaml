@@ -1,2 +1,2 @@
 eups_product:
-  - meas_algorithms  # lsst_distrib
+  - lsst_distrib
