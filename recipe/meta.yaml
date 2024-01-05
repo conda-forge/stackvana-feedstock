@@ -34,12 +34,12 @@ outputs:
     requirements:
       host:
         - stackvana-core =={{ version }}
-        - stackvana-afw =={{ version }}
+        - stackvana--meas_algorithms =={{ version }}
         - python
       run:
         - python
         - stackvana-core =={{ version }}
-        - stackvana-afw =={{ version }}
+        - stackvana--meas_algorithms =={{ version }}
     test:
       commands:
         - setup {{ eups_product }}
