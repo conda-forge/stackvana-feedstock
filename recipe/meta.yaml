@@ -22,7 +22,7 @@ source:
   sha256: 5f2ff69dfcd65134835f296bd227d3dc3ef8a80c8e6d3aa10d2f45b486cf944f
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: stackvana-{{ eups_product }}
@@ -34,12 +34,12 @@ outputs:
     requirements:
       host:
         - stackvana-core =={{ version }}
-        - stackvana-afw =={{ version }}
+        - stackvana-meas_algorithms =={{ version }}
         - python
       run:
         - python
         - stackvana-core =={{ version }}
-        - stackvana-afw =={{ version }}
+        - stackvana-meas_algorithms =={{ version }}
     test:
       commands:
         - setup {{ eups_product }}
