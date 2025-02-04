@@ -5,5 +5,4 @@ export EUPSPKG_NJOBS=2
 # needed by scarlet apparently
 ln -s ${PREFIX}/include/eigen3/Eigen ${PREFIX}/include/Eigen
 
-stackvana-build source_injection
-stackvana-build ${eups_product}
+stackvana-build source_injection ${eups_product}
