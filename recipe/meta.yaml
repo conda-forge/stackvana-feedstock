@@ -35,6 +35,7 @@ outputs:
       host:
         - stackvana-core =={{ version }}
         - python
+        - eups <2.2.12
       run:
         - python
         - stackvana-core =={{ version }}
