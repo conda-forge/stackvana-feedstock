@@ -9,7 +9,7 @@ ln -s ${PREFIX}/include/eigen3/Eigen ${PREFIX}/include/Eigen
 # try newer eups
 conda uninstall eups --force --yes
 
-git clone https://github.com/RobertLuptonTheGood/eups.git eups_new
+git clone https://github.com/beckermr/eups.git eups_new
 pushd eups_new
 git checkout u/timj/fix-close-file
 EUPS_HOME="${PREFIX}/eups"
