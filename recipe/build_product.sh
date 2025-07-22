@@ -9,9 +9,9 @@ ln -s ${PREFIX}/include/eigen3/Eigen ${PREFIX}/include/Eigen
 # try newer eups
 conda uninstall eups --force --yes
 
-git clone https://github.com/beckermr/eups.git eups_new
+git clone https://github.com/ktlim/eups.git eups_new
 pushd eups_new
-git checkout u/timj/fix-close-file
+git checkout tickets/DM-51444a
 EUPS_HOME="${PREFIX}/eups"
 EUPS_DIR="${EUPS_HOME}"
 export EUPS_PATH="${PREFIX}/share/eups"
