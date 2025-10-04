@@ -11,6 +11,8 @@
 context:
   name: stackvana
   version: "0.2025.40"
+  lsst_pyver: "3.12"
+  eups_product: lsst_distrib
   raw_major_version: '${{ (version | split("."))[0] }}'
   raw_minor_version: '${{ (version | split("."))[1] }}'
   raw_patch_version: '${{ (version | split("."))[2] }}'
@@ -47,7 +49,7 @@ outputs:
       run:
         - python
         - stackvana-core ==${{ version }}
-    test:
+    tests:
       - script:
           - setup ${{ eups_product }}
           - python -c "import lsst"
@@ -63,7 +65,7 @@ outputs:
       run:
         - python
         - ${{ pin_subpackage("stackvana-" ~ eups_product, upper_bound="x.x.x") }}
-    test:
+    tests:
       - script:
           - python -c "import lsst"
 
