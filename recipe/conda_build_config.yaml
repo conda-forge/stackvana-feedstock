@@ -1,2 +1,4 @@
-eups_product:
-  - lsst_distrib
+  lsst_pyver:
+    - "3.12"
+  eups_product:
+    - lsst_distrib
