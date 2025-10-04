@@ -1,4 +1,9 @@
 conda_forge_output_validation: true
+azure:
+  free_disk_space:
+    - apt
+    - cache
+    - docker
 bot:
   automerge: true
   check_solvable: true
