@@ -7,6 +7,8 @@ azure:
 bot:
   automerge: true
   check_solvable: true
+  version_updates:
+    use_curl: true
 github:
   branch_name: main
   tooling_branch_name: main
