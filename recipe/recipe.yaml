@@ -41,8 +41,19 @@ outputs:
       script: build_product.sh
     requirements:
       host:
-        - stackvana-core ==${{ version }}
+        # these pins are here so we get the proper run exports
+        # but defer the versions to rubin-env
+        - ${{ c_compiler }}_${{ target_platform }} *
+        - ${{ cxx_compiler }}_${{ target_platform }} *
+        - ${{ fortran_compiler }}_${{ target_platform }} *
+        - ${{ rust_compiler }}_${{ target_platform }} *
+        - ${{ stdlib('c') }}
+        - if: osx
+          then: llvm-openmp
+        - if: linux
+          then: libgomp
         - python
+        - stackvana-core ==${{ version }}        
       run:
         - python
         - stackvana-core ==${{ version }}
