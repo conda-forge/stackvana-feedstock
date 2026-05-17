@@ -25,7 +25,7 @@ recipe:
 
 source:
   url: https://eups.lsst.codes/stack/src/tags/${{ dm_tag }}.list
-  sha256: ec40a6bd4c1418332e2add7d9b289f4701949db6e587e73ffdb063a7a944ca23
+  sha256: 16920440573cfe3a2429b05c3560665d352dfc496bee91c0016cbde8f1401170
 
 build:
   number: 0
