@@ -1,9 +1,4 @@
 conda_forge_output_validation: true
-azure:
-  free_disk_space:
-    - apt
-    - cache
-    - docker
 bot:
   automerge: true
   check_solvable: true
@@ -15,5 +10,5 @@ github:
 conda_build:
   pkg_format: '2'
 conda_build_tool: rattler-build
-github_actions:
+workflow_settings:
   free_disk_space: true
