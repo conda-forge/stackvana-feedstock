@@ -19,7 +19,7 @@ eups_product:
 fortran_compiler:
 - gfortran
 llvm_openmp:
-- '19'
+- '21'
 lsst_pyver:
 - '3.13'
 macos_machine:
