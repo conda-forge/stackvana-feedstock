@@ -28,7 +28,7 @@ source:
   sha256: 0683c9ca7682dec33987afa0bbe99da3c7dd3d9c623aa6c917945a8994bfcd33
 
 build:
-  number: 0
+  number: 1
   skip:
     - win
     - match(python, "!=${{ lsst_pyver }}")
